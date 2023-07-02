@@ -1,9 +1,9 @@
-function fetchRmpByTeacher(prof: string) {
-  //! See how I can fetch the graphql data right away from the API instead of
-  //! having to parse through the entire HTML document (slower)
-}
+import { GraphQLClient } from "graphql-request";
+import { AUTH_TOKEN } from "./constants";
 
-const getTeacher = async () => {
-  return 0;
-};
+const client = new GraphQLClient("https://www.ratemyprofessors.com/graphql", {
+  headers: {
+    authorization: `Basic ${AUTH_TOKEN}`,
+  },
+});
 

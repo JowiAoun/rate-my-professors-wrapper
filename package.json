@@ -1,30 +1,6 @@
 {
-  "name": "rate-my-professors-wrapper",
-  "version": "1.0.0",
-  "description": "Wrapper for \"Rate My Professors\" used to get data from the website https://www.ratemyprofessors.com/",
-  "main": "./src/index.ts",
-  "scripts": {
-    "test": "rmp-wrapper"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JowiAoun/rate-my-professors-wrapper.git"
-  },
-  "keywords": [
-    "ratemyprofessors",
-    "wrapper",
-    "scrape",
-    "api"
-  ],
-  "author": "Jowi Aoun",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/JowiAoun/rate-my-professors-wrapper/issues"
-  },
-  "homepage": "https://github.com/JowiAoun/rate-my-professors-wrapper#readme",
   "dependencies": {
-    "@types/graphql": "^14.5.0",
-    "graphql": "^16.7.1",
+    "graphql-request": "^6.1.0",
     "typescript": "^5.1.6"
   }
 }
