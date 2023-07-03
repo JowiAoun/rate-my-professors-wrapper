@@ -8,7 +8,7 @@
     "professor",
     "ratings"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple wrapper for the website 'Rate My Professors' allowing to easily get Teacher ratings and more.",
   "main": "dist/src/index.js",
   "types": "dts/src/index.d.ts",
