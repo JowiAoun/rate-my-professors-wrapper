@@ -4,12 +4,14 @@
     "ratemyprofessors",
     "scrape",
     "graphql",
+    "api",
     "professor",
     "ratings"
   ],
   "version": "1.0.0",
   "description": "Simple wrapper for the website 'Rate My Professors' allowing to easily get Teacher ratings and more.",
   "main": "dist/src/index.js",
+  "types": "dts/src/index.d.ts",
   "repository": { 
     "type" :"git",
     "url": "git@github.com:JowiAoun/rate-my-professors-wrapper.git"
@@ -27,7 +29,7 @@
   },
   "ava": {
     "files": [
-      "./test/**/*"
+      "./test/**/*.test.ts"
     ],
     "extensions": [
       "ts", "js"
