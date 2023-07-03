@@ -23,22 +23,20 @@ export interface TeacherFromSearch {
   };
 }
 
-const searchTeacher = async (name: string, schoolID: string): Promise<TeacherFromSearch[]> => {
+const searchTeacher = async (
+  name: string,
+  schoolID: string
+): Promise<TeacherFromSearch | undefined> => {
   const response: any = await client.request(getTeacherByNameSchoolQuery, {
     text: name,
-    schoolID
+    schoolID,
   });
 
   if (response.newSearch.teachers === null) {
-    return [];
+    return undefined;
+  } else {
+    return response.newSearch.teachers.edges[0]?.node;
   }
-
-  return response.newSearch.teachers.edges.map((edge: { node: TeacherFromSearch }) => edge.node);
 };
 
-
-//! Testing
-(async () => {
-  const result = await searchTeacher("Alina Shaikhet", "U2Nob29sLTE0MjA=");
-  console.log(result);
-})();
+export default { searchTeacher };
