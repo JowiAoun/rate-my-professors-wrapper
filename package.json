@@ -1,4 +1,21 @@
 {
+  "name": "rate-my-professors-wrapper",
+  "keywords": [
+    "ratemyprofessors",
+    "scrape",
+    "graphql",
+    "professor",
+    "ratings"
+  ],
+  "version": "1.0.0",
+  "description": "Simple wrapper for the website 'Rate My Professors' allowing to easily get Teacher ratings and more.",
+  "main": "dist/src/index.js",
+  "repository": { 
+    "type" :"git",
+    "url": "git@github.com:JowiAoun/rate-my-professors-wrapper.git"
+  },
+  "author": "Jowi Aoun <jowiaoun@hotmail.com>",
+  "license": "MIT",
   "dependencies": {
     "graphql-request": "^6.1.0",
     "typescript": "^5.1.6"
@@ -10,13 +27,14 @@
   },
   "ava": {
     "files": [
-      "test/**/*"
+      "./test/**/*"
     ],
     "extensions": [
-      "ts"
+      "ts", "js"
     ],
     "require": [
       "ts-node/register"
-    ]
+    ],
+    "snapshotDir": "test/snapshots"
   }
 }
